@@ -1255,7 +1255,7 @@ body {
   .header-top .container { flex-wrap: wrap; }
 
   .search-field {
-    width: 270;
+    width: 270px;
     font-size: var(--fs-7);
     border: 2px solid var(--hoockers-green_20);
     border-radius: var(--radius-3);
