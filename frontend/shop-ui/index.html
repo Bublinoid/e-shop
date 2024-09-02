@@ -51,7 +51,7 @@
   <div class="header-top" data-header>
     <div class="container">
 
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+      <button class="nav-open-btn" aria-label="open menu" id="navbar" data-toggler>
         <span class="line line-1"></span>
         <span class="line line-2"></span>
         <span class="line line-3"></span>
@@ -71,17 +71,17 @@
 
       <div class="header-actions">
 
-        <button class="header-action-btn" aria-label="user">
+        <button class="header-action-btn" id="user" aria-label="user" data-toggler>
           <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
         </button>
 
-        <button class="header-action-btn" aria-label="favourite item">
+        <button class="header-action-btn" id="favourite" aria-label="favourite item" data-toggler>
           <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
 
           <span class="btn-badge">0</span>
         </button>
 
-        <button class="header-action-btn" aria-label="cart item">
+        <button class="header-action-btn" id="cart" aria-label="cart item" data-toggler>
           <data class="btn-text" value="0">$0.00</data>
 
           <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
@@ -138,7 +138,7 @@
         <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing">
       </a>
 
-      <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+      <button class="nav-close-btn" id="navbar" aria-label="close menu" data-toggler>
         <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
       </button>
     </div>
@@ -146,30 +146,30 @@
     <ul class="navbar-list">
 
       <li>
-        <a href="#home" class="navbar-link" data-nav-link>Home</a>
+        <a href="#home" class="navbar-link" id="navbar" data-toggler>Home</a>
       </li>
 
       <li>
-        <a href="#collection" class="navbar-link" data-nav-link>Collection</a>
+        <a href="#collection" class="navbar-link" id="navbar" data-toggler>Collection</a>
       </li>
 
       <li>
-        <a href="#shop" class="navbar-link" data-nav-link>Shop</a>
+        <a href="#shop" class="navbar-link" id="navbar" data-toggler>Shop</a>
       </li>
 
       <li>
-        <a href="#offer" class="navbar-link" data-nav-link>Offer</a>
+        <a href="#offer" class="navbar-link" id="navbar" data-toggler>Offer</a>
       </li>
 
       <li>
-        <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+        <a href="#blog" class="navbar-link" id="navbar" data-toggler>Blog</a>
       </li>
 
     </ul>
 
   </div>
 
-  <div class="overlay" data-nav-toggler data-overlay></div>
+  <div class="overlay" id="navbar" data-overlay-navbar data-toggler></div>
 </div>
 
 
@@ -688,7 +688,7 @@
       </div>
     </section>
 
-    <section class="section shop" id="shop-2" aria-label="shop" data-section>
+    <section class="section shop" id="shop" aria-label="shop" data-section>
       <div class="container">
 
         <div class="title-wrapper">
@@ -1282,6 +1282,7 @@
       </div>
     </section>
 
+
   </article>
 </main>
 
@@ -1451,6 +1452,60 @@
 </a>
 
 
+
+<div class="sidebar">
+  <div class="mobile-navbar mobile-cart" data-cart>
+    <div class="wrapper">
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing">
+      </a>
+      <button class="nav-close-btn" aria-label="close menu" id="cart" data-toggler>
+        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+      </button>
+    </div>
+    <ul class="navbar-list">
+      <h1>КОРЗИНА</h1>
+      Здесь товары<br>1<br>2<br>3
+    </ul>
+  </div>
+  <div class="overlay" id="cart" data-overlay-cart data-toggler></div>
+</div>
+
+<div class="sidebar">
+  <div class="mobile-navbar mobile-user" data-user>
+    <div class="wrapper">
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing">
+      </a>
+      <button class="nav-close-btn" id="user" aria-label="close menu" data-toggler>
+        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+      </button>
+    </div>
+    <ul class="navbar-list">
+      <h1>ЮЗЕР</h1>
+      Здесь авторизация<br>1<br>2<br>3
+    </ul>
+  </div>
+  <div class="overlay" id="user" data-overlay-user data-toggler></div>
+</div>
+
+<div class="sidebar">
+  <div class="mobile-navbar mobile-favourite" data-favourite>
+    <div class="wrapper">
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing">
+      </a>
+      <button class="nav-close-btn" aria-label="close menu" id="favourite" data-toggler>
+        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+      </button>
+    </div>
+    <ul class="navbar-list">
+      <h1>FAVOURITE</h1>
+      Здесь товары<br>1<br>2<br>3
+    </ul>
+  </div>
+  <div class="overlay" id="favourite" data-overlay-favourite data-toggler></div>
+</div>
 
 
 
