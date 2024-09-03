@@ -1471,22 +1471,29 @@
   <div class="overlay" id="cart" data-overlay-cart data-toggler></div>
 </div>
 
-<div class="sidebar">
-  <div class="mobile-navbar mobile-user" data-user>
-    <div class="wrapper">
-      <a href="#" class="logo">
-        <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing">
-      </a>
-      <button class="nav-close-btn" id="user" aria-label="close menu" data-toggler>
-        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-      </button>
-    </div>
-    <ul class="navbar-list">
-      <h1>ЮЗЕР</h1>
-      Здесь авторизация<br>1<br>2<br>3
-    </ul>
+div class="sidebar">
+<div class="mobile-navbar mobile-user" data-user>
+  <div class="wrapper">
+    <a href="#" class="logo">
+      <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing">
+    </a>
+    <button class="nav-close-btn" id="user" aria-label="close menu" data-toggler>
+      <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+    </button>
   </div>
-  <div class="overlay" id="user" data-overlay-user data-toggler></div>
+  <ul class="navbar-list">
+    <strong style="font-size: 1.5em;">Войти или зарегистрироваться</strong><br>
+    <p>Для подтверждения, введите код из SMS-сообщения.</p>
+    <form id="auth-form" action="/submit_auth" method="POST" class="auth-form">
+      <div class="phone-input">
+        <label for="phone">+7</label>
+        <input type="text" id="phone" name="phone" placeholder="Ваш номер телефона" required>
+      </div>
+      <button type="submit" id="submit-btn" class="black-button">Получить код</button>
+    </form>
+  </ul>
+</div>
+<div class="overlay" id="user" data-overlay-user data-toggler></div>
 </div>
 
 <div class="sidebar">

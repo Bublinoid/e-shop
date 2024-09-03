@@ -506,13 +506,77 @@ body {
   pointer-events: all;
 }
 
-
 .mobile-cart, .mobile-user, .mobile-favourite {
   left: auto;
   right: 0;
-  max-width: 500px;
+  max-width: 700px;
   transform: translateX(100%);
 }
+
+/*-----------------------------------*\
+  #AUTHORIZATION FORM
+\*-----------------------------------*/
+
+.auth-form {
+  margin-top: 20px;
+}
+
+.auth-form strong {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--black); /* Цвет текста */
+}
+
+
+.auth-form p {
+  color: var(--white); /* Цвет текста */
+  margin-bottom: 15px;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--hoockers-green); /* Линия под полем ввода */
+  padding-bottom: 10px;
+}
+
+.phone-input label {
+  font-size: 1.2em;
+  color: var(--black); /* Цвет текста */
+  margin-right: 10px;
+}
+
+.phone-input input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1em;
+  background-color: transparent; /* Прозрачный фон */
+  color: var(--black); /* Цвет текста */
+  border: none;
+  outline: none;
+}
+
+.black-button {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: 2px solid var(--hoockers-green); /* Зеленая рамка */
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.black-button:hover {
+  background-color: var(--hoockers-green); /* Изменение фона при наведении */
+  color: var(--black); /* Изменение цвета текста при наведении */
+}
+
 
 
 /*-----------------------------------*\

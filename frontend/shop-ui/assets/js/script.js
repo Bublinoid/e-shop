@@ -85,3 +85,53 @@ const scrollReveal = function () {
 scrollReveal();
 
 addEventOnElem(window, "scroll", scrollReveal);
+
+document.addEventListener('DOMContentLoaded', function () {
+  const phoneInput = document.getElementById('phone');
+
+  phoneInput.addEventListener('input', function (e) {
+    let input = e.target.value.replace(/\D/g, '');
+    if (input.length > 0) {
+      input = input.substring(0, 3) + '-' + input.substring(3, 6) + '-' + input.substring(6, 8) + '-' + input.substring(8, 10);
+    }
+    e.target.value = input;
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const authForm = document.getElementById('auth-form');
+
+  authForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Останавливаем стандартное поведение отправки формы
+
+    const phoneInput = document.getElementById('phone');
+    const phoneNumber = phoneInput.value.trim();
+
+    if (phoneNumber) {
+      fetch('/submit_auth', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ phone: phoneNumber })
+      })
+          .then(response => response.json())
+          .then(data => {
+            // Обработка ответа от сервера
+            if (data.success) {
+              alert('Код отправлен на ваш телефон.');
+              // Здесь можно перенаправить на страницу ввода кода или показать форму для кода
+            } else {
+              alert('Ошибка при отправке кода. Попробуйте снова.');
+            }
+          })
+          .catch(error => {
+            console.error('Ошибка:', error);
+            alert('Произошла ошибка. Пожалуйста, попробуйте позже.');
+          });
+    } else {
+      alert('Пожалуйста, введите номер телефона.');
+    }
+  });
+});
+
