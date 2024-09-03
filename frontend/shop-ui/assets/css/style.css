@@ -507,7 +507,12 @@ body {
 }
 
 
-
+.mobile-cart, .mobile-user, .mobile-favourite {
+  left: auto;
+  right: 0;
+  max-width: 500px;
+  transform: translateX(100%);
+}
 
 
 /*-----------------------------------*\
@@ -1255,7 +1260,7 @@ body {
   .header-top .container { flex-wrap: wrap; }
 
   .search-field {
-    width: 270px;
+    width: 270;
     font-size: var(--fs-7);
     border: 2px solid var(--hoockers-green_20);
     border-radius: var(--radius-3);

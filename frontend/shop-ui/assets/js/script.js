@@ -19,28 +19,18 @@ const addEventOnElem = function (elem, type, callback) {
 
 
 /**
- * navbar toggle
+ * sidebars toggle - navbar, user, favourite, cart
  */
 
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const navbar = document.querySelector("[data-navbar]");
-const navbarLinks = document.querySelectorAll("[data-nav-link]");
-const overlay = document.querySelector("[data-overlay]");
+document.querySelectorAll("[data-toggler]").forEach( toggle => {
+  const sidebar = document.querySelector("[data-" + toggle.id + "]");
+  const overlay = document.querySelector("[data-overlay-" + toggle.id + "]");
 
-const toggleNavbar = function () {
-  navbar.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-addEventOnElem(navTogglers, "click", toggleNavbar);
-
-const closeNavbar = function () {
-  navbar.classList.remove("active");
-  overlay.classList.remove("active");
-}
-
-addEventOnElem(navbarLinks, "click", closeNavbar);
-
+  toggle.addEventListener("click", () => {
+    sidebar.classList.toggle("active")
+    overlay.classList.toggle("active")
+  });
+});
 
 
 /**
